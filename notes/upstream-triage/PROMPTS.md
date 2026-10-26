@@ -19,6 +19,13 @@ All user prompts that drove work in this folder, verbatim, in order.
 
 (Invoked with `/workflow-authoring`; ultracode mode on.)
 
+### Prompt 2
+
+> continue
+
+(Sent after the first triage run hit the account's monthly spend limit, which killed 144
+skeptic-verification agents. The run was resumed from cache, so only the failed agents re-ran.)
+
 ### Sub-agent prompts
 
 Workflow and sub-agent prompts used to do the triage and implementation are saved

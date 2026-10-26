@@ -27,6 +27,8 @@ This checkout is a private fork of OBS Studio. It is **never upstreamed**.
 - Formatting: clang-format **22.1.3** (`.clang-format`; CI enforces it). Not installed globally;
   `pip install clang-format==22.1.3` into a venv.
 - System git is 2.33, so there's no `git merge-tree --write-tree`. Use `git apply --check` or a scratch worktree.
+- Don't run `git <cmd> --help` / `git help`: Git for Windows opens HTML docs in the user's browser. Repo-local
+  config (`help.format=man`, `help.browser=noop`) now blocks this, but avoid it anyway.
 
 ## Code style
 Follow `CODESTYLE.md` and the surrounding code. Commit subjects use upstream style: `module: Imperative summary`.
