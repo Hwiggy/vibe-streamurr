@@ -49,3 +49,8 @@ build-aux/flatpak-github-action-modified-*
 
 # Exclude CMake build number cache
 /cmake/.CMakeBuildNumber
+
+# Fork-local triage notes and agent guidance (not upstream)
+!/notes
+!CLAUDE.md
+/notes/upstream-triage/data/
