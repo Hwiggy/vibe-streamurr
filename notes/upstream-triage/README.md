@@ -1,8 +1,8 @@
 # Upstream issue/PR triage (fork-local)
 
-This fork of [obsproject/obs-studio](https://github.com/obsproject/obs-studio) is never
-upstreamed: no PRs are opened from it, and nothing is pushed to `origin` (which points
-at upstream). This folder records how every open upstream issue and PR was triaged
+This fork of [obsproject/obs-studio](https://github.com/obsproject/obs-studio)
+(published as `Hwiggy/vibe-streamurr`, the `origin` remote) is never upstreamed: no PRs are
+opened from it to upstream. The `upstream` remote is fetch-only. This folder records how every open upstream issue and PR was triaged
 against this fork's code, and why.
 
 ## Snapshot
@@ -15,7 +15,7 @@ against this fork's code, and why.
   `curl "https://api.github.com/repos/obsproject/obs-studio/issues?state=open&per_page=100&page=N"`
   for N=1..10, plus `&direction=asc` pages 1..3 (page-based paging stops at 1000 items), merged by number.
 - PR heads were fetched over git (no API cost) into `refs/upstream-pr/<N>`:
-  `tr -d '\r' < data/refspecs.txt | xargs -n 60 git fetch --no-tags origin`.
+  `tr -d '\r' < data/refspecs.txt | xargs -n 60 git fetch --no-tags upstream`.
 
 ## Limitations
 
